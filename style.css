@@ -282,14 +282,14 @@ h2 {
         font-size: 6vw;
     }
 
-    .letsPlay,
-    .again {
+    .letsPlay {
         top: 35vw;
         font-size: 3vw;
     }
 
     .again {
         top: 20vw;
+        font-size: 3vw;
     }
 
     .sel {
