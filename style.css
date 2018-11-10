@@ -1,0 +1,319 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    overflow: hidden;
+}
+
+body {
+    position: relative;
+    font-family: 'Quicksand', sans-serif;
+    color: #fff;
+    background-color: #353b48;
+}
+
+.tittlePlay {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+h1 {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin: 20px;
+    font-size: 4vw;
+    z-index: 999;
+    transition: .7s .2s ease;
+}
+
+.letsPlay,
+.again {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    display: inline-block;
+    font-size: 3.1vw;
+    border: 1px solid #fff;
+    padding: 0 20px;
+    line-height: 150%;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .7s ease;
+}
+
+.again {
+    position: relative;
+    top: 25%;
+    display: none;
+    z-index: 999;
+    opacity: 0;
+    transform: translate(-50%, 270%);
+}
+
+.letsPlay:hover,
+.again:hover {
+    background-color: #fff;
+    color: #353b48;
+}
+
+
+.wrap {
+    position: absolute2;
+    top: 100vh;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    transition: 1s ease;
+}
+
+.select {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 70vh;
+    width: 100vw;
+    padding-top: 100px;
+    margin-bottom: 15px;
+    background-color: #353b48;
+    transition: .5s linear;
+}
+
+.wrap.active {
+    position: absolute;
+    top: 0;
+    opacity: 1;
+}
+
+.sel {
+    text-align: center;
+    font-size: 8.4vw;
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+.sel p {
+    text-align: center;
+    font-size: 4.2vw;
+    opacity: 0;
+    transition: .5s ease;
+}
+
+.pre:hover {
+    transform: translateY(-10%);
+}
+
+
+.pre:hover p {
+    opacity: 1;
+    transform: translateY(0);
+
+}
+
+.pre.active p {
+    opacity: 1;
+}
+
+.chosen {
+    display: none;
+    justify-content: space-between;
+    position: absolute;
+    top: 14%;
+    left: 0;
+    height: 200px;
+    width: 50%;
+    transform: translateX(50%);
+    z-index: 9999;
+    opacity: 0;
+    transition: .2s linear;
+}
+
+.chosen .sel p {
+    opacity: 1;
+}
+
+.stats {
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    padding: 20px 30px;
+}
+
+h2 {
+    font-size: 3rem;
+    color: black;
+}
+
+.win {
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -200%);
+    color: #fff;
+    font-size: .7vw;
+    opacity: 0;
+}
+
+@media screen and (max-width: 1024px) {
+    .win {
+        top: 40vh;
+    }
+}
+
+.win.active {
+    animation: win 1s 1s linear both;
+}
+
+@keyframes win {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        opacity: .2;
+    }
+
+    20% {
+        opacity: .6;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    100% {
+        font-size: 4vw;
+        opacity: 1;
+    }
+}
+
+.stats p {
+    color: black;
+    font-size: 2.5vw;
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 7vw;
+        left: 45%;
+    }
+
+    .sel {
+        font-size: 11vw;
+    }
+
+    .sel p {
+        font-size: 5vw;
+    }
+
+    .win {
+        top: 25vh;
+        font-size: 1.5vw;
+    }
+
+    .stats p {
+        font-size: 5vw;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    h1 {
+        font-size: 6vw;
+    }
+
+    .letsPlay,
+    .again {
+        font-size: 5vw;
+    }
+
+    .sel {
+        font-size: 15vw;
+    }
+
+    .sel p {
+        font-size: 5vw;
+    }
+
+    .win {
+        top: 25vh;
+        font-size: 3vw;
+    }
+
+    @keyframes win {
+        0% {
+            opacity: 0;
+        }
+
+        10% {
+            opacity: .2;
+        }
+
+        20% {
+            opacity: .6;
+        }
+
+        30% {
+            opacity: 1;
+        }
+
+        100% {
+            font-size: 6vw;
+            opacity: 1;
+        }
+    }
+
+    .stats p {
+        font-size: 5vw;
+    }
+}
+
+@media screen and (orientation: landscape) and (min-width: 532px) and (max-width: 1024px) {
+    h1 {
+        font-size: 6vw;
+    }
+
+    .letsPlay,
+    .again {
+        top: 35vw;
+        font-size: 3vw;
+    }
+
+    .again {
+        top: 20vw;
+    }
+
+    .sel {
+        font-size: 10vw;
+    }
+
+    .sel p {
+        font-size: 5vw;
+    }
+
+    .win {
+        top: 50vh;
+        font-size: 3vw;
+    }
+
+    .stats {
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 2vw;
+    }
+
+    .stats p {
+        font-size: 2.5vw;
+    }
+}

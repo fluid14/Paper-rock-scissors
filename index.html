@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="tittlePlay">
+        <h1>Paper, rock, scissors!</h1>
+        <div class="letsPlay">Let's Play</div>
+        <div class="again">
+            <p>Try again!!</p>
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="select">
+            <div class="sel paper pre" data-key="paper"><i class="fas fa-hand-paper"></i>
+                <p>Paper</p>
+            </div>
+            <div class="sel rock pre" data-key="rock"><i class="fas fa-hand-rock"></i>
+                <p>Rock</p>
+            </div>
+            <div class="sel scissors pre" data-key="scissors"><i class="fas fa-hand-scissors"></i>
+                <p>Scissors</p>
+            </div>
+        </div>
+
+        <div class="chosen">
+            <div class="sel" data-who='user'>
+            </div>
+            <div class="sel" data-who='computer'>
+            </div>
+        </div>
+        <p class="win">Win: <span></span></p>
+
+        <div class="stats">
+            <h2>Stats:</h2>
+            <p data-key='userWin'>Player win: <span>0</span></p>
+            <p data-key='computerWin'>Computer win: <span>0</span></p>
+            <p data-key='draw'>Draw: <span>0</span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
