@@ -137,7 +137,6 @@ h1 {
     z-index: 9999;
     opacity: 0;
     transition: .2s linear;
-    border: 1px white solid;
     z-index: 1;
 }
 
