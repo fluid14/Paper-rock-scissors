@@ -90,6 +90,10 @@ h1 {
     transition: .5s linear;
 }
 
+.sel.none {
+    display: none;
+}
+
 .wrap.active {
     position: absolute;
     top: 0;

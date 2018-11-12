@@ -1,4 +1,5 @@
 const selectDiv = document.querySelector('.select');
+const selectWrap = document.querySelectorAll('.select .sel');
 const select = document.querySelectorAll('div.sel');
 const again = document.querySelector('.again');
 const winDiv = document.querySelector('.win');
@@ -78,6 +79,7 @@ select.forEach(sel => sel.addEventListener('click', function () {
     }, 1000)
     chosenDiv.style.display = 'flex';
     setTimeout(function () {
+        selectWrap.forEach(selAll => selAll.classList.add('none'));
         chosenDiv.style.opacity = 1;
     }, 2000)
     resultIco(sel);
