@@ -97,6 +97,9 @@ again.addEventListener('click', function () {
     winDiv.classList.remove('active');
 
     setTimeout(function () {
+        selectWrap.forEach(selAll => selAll.classList.remove('none'));
+    }, 1000)
+    setTimeout(function () {
         selectDiv.style.opacity = "1";
     }, 1000)
 })
